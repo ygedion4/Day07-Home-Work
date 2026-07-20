@@ -1,9 +1,3 @@
-# =========================================================
-# 1. Two Sum
-# =========================================================
-# Big-O Complexity:
-# - Time Complexity: O(n) -> Single pass through the array.
-# - Space Complexity: O(n) -> To store up to n elements in the hash map.
 def two_sum(nums: list[int], target: int) -> list[int]:
     """
     Hash Map Strategy:
@@ -23,12 +17,6 @@ def two_sum(nums: list[int], target: int) -> list[int]:
     return []  # Return empty list if no pair is found
 
 
-# =========================================================
-# 2. Is Anagram
-# =========================================================
-# Big-O Complexity:
-# - Time Complexity: O(n) -> Iterate through both strings of length n.
-# - Space Complexity: O(1) or O(u) -> Space bounded by the number of unique characters (at most 26 for lowercase English letters).
 def is_anagram(s: str, t: str) -> bool:
     """
     Hash Map Strategy:
@@ -56,12 +44,6 @@ def is_anagram(s: str, t: str) -> bool:
     return True
 
 
-# =========================================================
-# 3. First Unique Character
-# =========================================================
-# Big-O Complexity:
-# - Time Complexity: O(n) -> Two linear passes through the string of length n.
-# - Space Complexity: O(1) or O(u) -> Stores frequencies of unique characters (max 26 for English lowercase).
 def first_uniq_char(s: str) -> int:
     """
     Hash Map Strategy:
@@ -84,9 +66,6 @@ def first_uniq_char(s: str) -> int:
     return -1
 
 
-# =========================================================
-# Test Cases (At least 3 test cases for each problem)
-# =========================================================
 def run_tests():
     print("Running Tests...\n")
 
