@@ -1,6 +1,3 @@
-# =========================================================
-# 1. Stack Implementation (LIFO - Last In First Out)
-# =========================================================
 class Stack:
     def __init__(self):
         self._items = []
@@ -25,9 +22,6 @@ class Stack:
         return len(self._items)
 
 
-# =========================================================
-# 2. Queue Implementation (FIFO - First In First Out)
-# =========================================================
 class Queue:
     def __init__(self):
         self._items = []
@@ -52,9 +46,6 @@ class Queue:
         return len(self._items)
 
 
-# =========================================================
-# 3. Problem 1: Balanced Brackets (Using Stack)
-# =========================================================
 def is_balanced(s: str) -> bool:
     """
     Checks if a string of brackets is balanced using Stack.
@@ -73,9 +64,6 @@ def is_balanced(s: str) -> bool:
     return stack.is_empty()
 
 
-# =========================================================
-# 4. Problem 2: Maximum Sliding Window Sum of Size K (Using Queue)
-# =========================================================
 def max_sliding_window_sum(arr: list, k: int) -> int:
     """
     Finds the maximum sum of any contiguous subarray of size k using Queue.
@@ -109,9 +97,6 @@ def max_sliding_window_sum(arr: list, k: int) -> int:
     return max_sum
 
 
-# =========================================================
-# Test Cases
-# =========================================================
 def run_tests():
     print("Running Tests...\n")
 
