@@ -98,9 +98,6 @@ class LinkedList:
         return " -> ".join(nodes) if nodes else "Empty LinkedList"
 
 
-# ---------------------------------------------------------
-# Test Cases
-# ---------------------------------------------------------
 
 def run_tests():
     print("Testing LinkedList Implementation...\n")
