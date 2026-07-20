@@ -1,23 +1,19 @@
 class Node:
-    """A node in a singly linked list."""
     def __init__(self, value):
         self.value = value
         self.next = None
 
 
 class LinkedList:
-    """Singly linked list implementation."""
     def __init__(self):
         self.head = None
 
     def prepend(self, value):
-        """Add a new node to the beginning of the list."""
         new_node = Node(value)
         new_node.next = self.head
         self.head = new_node
 
     def append(self, value):
-        """Add a new node to the end of the list."""
         new_node = Node(value)
         if not self.head:
             self.head = new_node
@@ -29,7 +25,6 @@ class LinkedList:
         current.next = new_node
 
     def delete(self, value):
-        """Delete the first occurrence of value in the list."""
         if not self.head:
             return False
 
@@ -48,7 +43,6 @@ class LinkedList:
         return False  # Value not found
 
     def reverse(self):
-        """Reverse the linked list in-place."""
         prev = None
         current = self.head
         
@@ -61,7 +55,6 @@ class LinkedList:
         self.head = prev
 
     def has_cycle(self):
-        """Detect if the linked list contains a cycle (Floyd's Cycle-Finding Algorithm)."""
         slow = self.head
         fast = self.head
 
@@ -74,7 +67,6 @@ class LinkedList:
         return False
 
     def __iter__(self):
-        """Make the linked list iterable."""
         current = self.head
         while current:
             yield current.value
@@ -96,7 +88,6 @@ class LinkedList:
             current = current.next
 
         return " -> ".join(nodes) if nodes else "Empty LinkedList"
-
 
 
 def run_tests():
