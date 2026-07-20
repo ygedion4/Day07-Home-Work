@@ -1,11 +1,4 @@
 def two_sum(nums: list[int], target: int) -> list[int]:
-    """
-    Hash Map Strategy:
-    We iterate through the list while maintaining a hash map storing {number: index}.
-    For each number x, we calculate its required complement = target - x.
-    If the complement exists in the hash map, we found the pair and return their indices.
-    Otherwise, we add the current number x and its index to the map.
-    """
     seen = {}  # Map value -> index
 
     for i, num in enumerate(nums):
@@ -18,14 +11,6 @@ def two_sum(nums: list[int], target: int) -> list[int]:
 
 
 def is_anagram(s: str, t: str) -> bool:
-    """
-    Hash Map Strategy:
-    First check if both strings have the same length; if not, return False.
-    We build a frequency map of characters in string 's'.
-    Then, we iterate through string 't' and decrement the character counts.
-    If a character in 't' is not in the map or its count drops below 0, return False.
-    If the loop finishes, all frequencies matched and we return True.
-    """
     if len(s) != len(t):
         return False
 
@@ -45,13 +30,6 @@ def is_anagram(s: str, t: str) -> bool:
 
 
 def first_uniq_char(s: str) -> int:
-    """
-    Hash Map Strategy:
-    Pass 1: Count frequency of each character in string 's' using a hash map.
-    Pass 2: Iterate through string 's' with indices and check character frequencies.
-    The first character with a frequency of 1 is our answer, so return its index.
-    If no unique character is found, return -1.
-    """
     char_counts = {}
 
     # Pass 1: Build frequency map
