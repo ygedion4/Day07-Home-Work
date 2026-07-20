@@ -47,10 +47,6 @@ class Queue:
 
 
 def is_balanced(s: str) -> bool:
-    """
-    Checks if a string of brackets is balanced using Stack.
-    Supported brackets: (), {}, []
-    """
     stack = Stack()
     mapping = {')': '(', '}': '{', ']': '['}
 
@@ -65,9 +61,6 @@ def is_balanced(s: str) -> bool:
 
 
 def max_sliding_window_sum(arr: list, k: int) -> int:
-    """
-    Finds the maximum sum of any contiguous subarray of size k using Queue.
-    """
     if not arr or k <= 0 or k > len(arr):
         return 0
 
